@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "810b5aba-eb3e-46c1-9234-7950d70705f9",
+		"name": "API Trunfo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7074687"
+	},
+	"item": [
+		{
+			"name": "User + token",
+			"item": [
+				{
+					"name": "Request - Criar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"xico\",\r\n    \"email\": \"xico@gmail.com\",\r\n    \"password\": \"xico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request - Listar todos usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request - Get Token usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"xico@gmail.com\",\r\n    \"password\": \"xico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trunfo - Veiculos",
+			"item": [
+				{
+					"name": "Request - Todos os trunfos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImV4cCI6MTY3MTcyNjQ0NiwiaWF0IjoxNjcxNzE5MjQ2LCJpc3MiOiJ0cnVuZm9BUEkifQ.bUjADXXIGSUgqByXeLcxfxLK8UgEIIsXCGQ1_C1-hjI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/trunfo/veiculo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trunfo",
+								"veiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request - Criar trunfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImV4cCI6MTY3MTcyNjQ0NiwiaWF0IjoxNjcxNzE5MjQ2LCJpc3MiOiJ0cnVuZm9BUEkifQ.bUjADXXIGSUgqByXeLcxfxLK8UgEIIsXCGQ1_C1-hjI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Audi A3 Sedan 2.0\",\r\n    \"velocidade\": \"210\",\r\n    \"potencia\": \"211 CV\",\r\n    \"aceleracao\": \"2.01s\", \r\n    \"cilindradas\": \"4000\", \r\n    \"Peso\": \"1200 KG\",\r\n    \"super\": \"Nao\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/trunfo/veiculo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trunfo",
+								"veiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Requeest - Lista Trunfo por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImV4cCI6MTY3MTcyNjQ0NiwiaWF0IjoxNjcxNzE5MjQ2LCJpc3MiOiJ0cnVuZm9BUEkifQ.bUjADXXIGSUgqByXeLcxfxLK8UgEIIsXCGQ1_C1-hjI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/trunfo/veiculo/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trunfo",
+								"veiculo",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request - Deletar Trunfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImV4cCI6MTY3MTcyNjQ0NiwiaWF0IjoxNjcxNzE5MjQ2LCJpc3MiOiJ0cnVuZm9BUEkifQ.bUjADXXIGSUgqByXeLcxfxLK8UgEIIsXCGQ1_C1-hjI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/trunfo/veiculo/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trunfo",
+								"veiculo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request - Editar Trunfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImV4cCI6MTY3MTcyNjQ0NiwiaWF0IjoxNjcxNzE5MjQ2LCJpc3MiOiJ0cnVuZm9BUEkifQ.bUjADXXIGSUgqByXeLcxfxLK8UgEIIsXCGQ1_C1-hjI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Corvett Aberto capota\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/trunfo/veiculo/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trunfo",
+								"veiculo",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Request - Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/home",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"home"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
